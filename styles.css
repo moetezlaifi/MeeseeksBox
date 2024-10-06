@@ -1,0 +1,80 @@
+/* Include the custom Rick and Morty Font */
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('fonts/GetSchwifty.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Get Schwifty', sans-serif;
+    background-color: #1A1A1A; /* Dark background */
+    color: #F4F4F4; /* Light Text */
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #FFDE00; /* Bright Yellow */
+    text-shadow: 3px 3px #00BFFF; /* Mr. Meeseeks Blue Shadow */
+    margin-top: 50px;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #5EFFE0; /* Light Teal */
+}
+
+/* Container */
+.container {
+    padding: 30px;
+}
+
+/* Meeseeks Box Styling */
+.meeseeks-box {
+    margin: 30px auto;
+    width: 250px;
+    height: 250px;
+}
+
+.meeseeks-button {
+    background-color: #0069D9; /* Meeseeks Box Dark Blue */
+    border: none;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.8); /* Blue Glow */
+    transition: all 0.3s ease-in-out;
+}
+
+.meeseeks-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 1); /* Glow on hover */
+}
+
+.meeseeks-button img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.meeseeks-button span {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #F4F4F4;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px #FF6700; /* Orange Glow */
+}
+
+/* Mr. Meeseeks Image */
+.meeseeks-image img {
+    margin-top: 40px;
+    width: 300px;
+    border: 5px solid #00BFFF; /* Mr. Meeseeks Blue */
+    border-radius: 10px;
+    box-shadow: 0 0 20px #FF6700; /* Orange Glow */
+}

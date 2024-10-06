@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeseeks Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Rick and Morty Styled Title -->
+        <h1>Summon Mr. Meeseeks!</h1>
+        <p>Press the button to summon Mr. Meeseeks and get instant help during the contest.</p>
+
+        <!-- Meeseeks Box with Button -->
+        <div class="meeseeks-box">
+            <button id="summonButton" class="meeseeks-button">
+                <img src="meeseeks_box.png" alt="Meeseeks Box" class="box-image">
+                <span>Press to Summon!</span>
+            </button>
+        </div>
+
+        <!-- Mr. Meeseeks Image -->
+        <div class="meeseeks-image">
+            <img src="mr_meeseeks.png" alt="Mr. Meeseeks">
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

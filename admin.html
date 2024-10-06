@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Meeseeks Dashboard</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+</head>
+<body>
+    <h1>Mr. Meeseeks Dashboard</h1>
+    <ul id="requestList"></ul>
+
+    <script>
+        // Firebase configuration (reuse your config from app.js)
+        var firebaseConfig = {
+            apiKey: "your-api-key",
+            authDomain: "your-project-id.firebaseapp.com",
+            databaseURL: "https://your-project-id.firebaseio.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project-id.appspot.com",
+            messagingSenderId: "your-messaging-sender-id",
+            appId: "your-app-id"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+
+        // Listen for new help requests
+        database.ref('help_requests').on('child_added', function(snapshot) {
+            var request = snapshot.val();
+            var requestItem = document.createElement('li');
+            requestItem.textContent = `Help request from ${request.contestant} at ${request.request_time}`;
+            
+            // Add request to the list
+            document.getElementById('requestList').appendChild(requestItem);
+        });
+    </script>
+</body>
+</html>
